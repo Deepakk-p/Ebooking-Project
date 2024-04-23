@@ -1,0 +1,263 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Web Design Mastery | WDM&Co</title>
+</head>
+
+<body style=" max-width:100%; overflow-x: hidden;">
+  <!-- navbar -->
+  <nav>
+    <div class="nav__logo">WDM&Co</div>
+    <ul class="nav__links">
+      <li class="link"><a href="{% url 'main' %}">Home</a></li>
+      <li class="link"><a href="{% url 'home' %}">Hotel</a></li>
+      <li class="link"><a href="#">Contact Us</a></li>
+      <li class="link"><a href="{% url 'login' %}">Log In</a></li>
+      <li class="link"><a href="{% url 'logout' %}">Log Out</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- end navbar -->
+
+
+  <!-- heder -->
+  <header class="section__container header__container">
+    <div class="header__image__container " >
+      <div class="header__content">
+        <h1>Enjoy Your Dream Vacation</h1>
+        <p>Book Hotels, Flights and stay packages at lowest price.</p>
+      </div>
+      <div class="booking__container">
+        <form>
+          <div class="form__group">
+            <div class="input__group">
+              <h5>Location</h5>
+              <input type="text" name="search" />
+              <!-- <label>Location</label> -->
+            </div>
+            <p>Where are you going?</p>
+          </div>
+          <div class="form__group">
+            <div class="input__group">
+              <h5>Check In</h5>
+              <input type="text" name=""/>
+              <!-- <label>Check In</label>  -->
+            </div>
+            <p>Add date</p>
+          </div>
+          <div class="form__group">
+            <div class="input__group">
+              <h5>Check Out</h5>
+              <input type="text" />
+              <!-- <label>Check Out</label> -->
+            </div>
+            <p>Add date</p>
+          </div>
+          <div class="form__group">
+            <div class="input__group">
+              <h5>Guests</h5>
+              <input type="text" />
+              <!-- <label>Guests</label> -->
+            </div>
+            <p>Add guests</p>
+          </div>
+        </form>
+        <button class="btn" type="submit"><i class="ri-search-line"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container align-items-center " style="position: relative; left: 600px; top: 40px;">
+    <a href="{% url 'home' %}" class="btn btn-info">BOOK NOW</a>
+  </div>
+  
+
+  <!--end header -->
+
+  <!-- hotels -->
+
+
+  <!-- <section class="section__container popular__container">
+      <h2 class="section__header">Popular Hotels</h2>
+      <div class="popular__grid">
+        <div class="popular__card">
+          <img src="{{data.image.url}}" alt="popular hotel" />
+          <div class="popular__content">
+            <div class="popular__card__header">
+              <h4>The Plaza Hotel</h4>
+              
+              <h4>$499</h4>
+            </div>
+            <div class="popular_count">
+              <span><i class="fa fa-eye"></i> count</span>
+
+            </div>
+
+            <p>New York City, USA</p>
+         
+            <div>
+              <span><i class="fa-solid fa-mobile"></i>mobile</span><br>
+              <span><i class="fa-solid fa-mobile"></i></span><br>
+              <span><i class="fa-solid fa-mobile"></i></span>
+            </div>  
+          </div>
+        </div>
+      </div> -->
+
+  <!-- <div class="popular__card">
+          <img src="assets/hotel-2.jpg" alt="popular hotel" />
+          <div class="popular__content">
+            <div class="popular__card__header">
+              <h4>Ritz Paris</h4>
+              <h4>$549</h4>
+            </div>
+            <p>Paris, France</p>
+          </div>
+        </div>
+        <div class="popular__card">
+          <img src="assets/hotel-3.jpg" alt="popular hotel" />
+          <div class="popular__content">
+            <div class="popular__card__header">
+              <h4>The Peninsula</h4>
+              <h4>$599</h4>
+            </div>
+            <p>Hong Kong</p>
+          </div>
+        </div>
+        <div class="popular__card">
+          <img src="assets/hotel-4.jpg" alt="popular hotel" />
+          <div class="popular__content">
+            <div class="popular__card__header">
+              <h4>Atlantis The Palm</h4>
+              <h4>$449</h4>
+            </div>
+            <p>Dubai, United Arab Emirates</p>
+          </div>
+        </div>
+        <div class="popular__card">
+          <img src="assets/hotel-5.jpg" alt="popular hotel" />
+          <div class="popular__content">
+            <div class="popular__card__header">
+              <h4>The Ritz-Carlton</h4>
+              <h4>$649</h4>
+            </div>
+            <p>Tokyo, Japan</p>
+          </div>
+        </div>
+        <div class="popular__card">
+          <img src="assets/hotel-6.jpg" alt="popular hotel" />
+          <div class="popular__content">
+            <div class="popular__card__header">
+              <h4>Marina Bay Sands</h4>
+              <h4>$549</h4>
+            </div>
+            <p>Singapore</p>
+          </div>
+        </div>
+      </div> -->
+  </section>
+
+  <!-- end hotel -->
+
+
+  <!-- clint card -->
+  <!-- <section class="client">
+      <div class="section__container client__container">
+        <h2 class="section__header">What our client say</h2>
+        <div class="client__grid">
+          <div class="client__card">
+            <img src="assets/client-1.jpg" alt="client" />
+            <p>
+              The booking process was seamless, and the confirmation was
+              instant. I highly recommend WDM&Co for hassle-free hotel bookings.
+            </p>
+          </div>
+          <div class="client__card">
+            <img src="assets/client-2.jpg" alt="client" />
+            <p>
+              The website provided detailed information about hotel, including
+              amenities, photos, which helped me make an informed decision.
+            </p>
+          </div>
+          <div class="client__card">
+            <img src="assets/client-3.jpg" alt="client" />
+            <p>
+              I was able to book a room within minutes, and the hotel exceeded
+              my expectations. I appreciate WDM&Co's efficiency and reliability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+  <!-- end client -->
+
+  <section class="section__container">
+    <div class="reward__container">
+      <p>100+ discount codes</p>
+      <h4>Join rewards and discover amazing discounts on your booking</h4>
+      <button class="reward__btn">Join Rewards</button>
+    </div>
+  </section>
+
+  <!-- footer -->
+
+  <footer class="footer">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <h3>WDM&Co</h3>
+        <p>
+          WDM&Co is a premier hotel booking website that offers a seamless and
+          convenient way to find and book accommodations worldwide.
+        </p>
+        <p>
+          With a user-friendly interface and a vast selection of hotels,
+          WDM&Co aims to provide a stress-free experience for travelers
+          seeking the perfect stay.
+        </p>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <p>About Us</p>
+        <p>Our Team</p>
+        <p>Blog</p>
+        <p>Book</p>
+        <p>Contact Us</p>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <p>FAQs</p>
+        <p>Terms & Conditions</p>
+        <p>Privacy Policy</p>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <p>Social Media</p>
+        <p>Help Center</p>
+        <p>Partnerships</p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2023 Web Design Mastery. All rights reserved.
+    </div>
+  </footer>
+</body>
+
+</html>

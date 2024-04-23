@@ -1,0 +1,30 @@
+{% extends 'navbar.html' %}
+{% block nav %}
+
+{% for i in mybooking %}
+<div class="border border-3 mt-3 shadow rounded row ">
+    <div class="col-4">
+        <img src="{{i.hotel.image.url}}" height="200px" width="300px" alt="product_image" class="img-thumbnail">
+    </div>
+    <div class="col-8 mt-5 text-dark">
+        <h3>{{i.hotel.name}}</h3>
+        <h4 class="text-secondary" > {{i.hotel.adress}}</h4>
+        <h5>Price: {{i.hotel.hotel_price}}</h5>
+        <h5> {{i.check_in_date}} - {{i.check_out_date}} </h5>
+        <h6>Date : {{i.date}}</h6>
+
+        
+        
+
+        <h5 class="text-danger"> 
+            {{i.booking_typ}}
+        </h5>
+        <a href="" class="btn btn-success">Place Order</a>
+        <a href="{% url 'cancel' i.id %}" class="btn" onclick="return confirm('Are you sure?')">
+            <i class="fa-solid fa-trash"></i>
+        </a>
+    </div>
+  </div>
+{%endfor%}
+
+{% endblock nav %}

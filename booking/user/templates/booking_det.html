@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- <link rel="stylesheet" href="booking.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .book-head {
+            margin-top: 100px;
+        }
+
+        .redirect-link {
+            text-decoration: none;
+            font-size: 20px;
+            color: red;
+            font-weight: 500;
+            white-space: 2px;
+        }
+
+        .booking-section {
+            border: 1px solid rgb(207, 207, 207);
+            margin-top: 100px;
+            padding: 15px;
+            padding-top: 0;
+        }
+
+        .booking-section h1 {
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 50px;
+            margin-top: 5px;
+        }
+
+        .bi-check-circle {
+            color: brown;
+            margin-right: 10px;
+        }
+
+        .booking-section p {
+            font-size: large;
+            font-weight: 500;
+            color: rgb(68, 68, 68)
+        }
+
+        .booking-section form label {
+            font-size: larger;
+            font-weight: 600;
+            white-space: 2px;
+        }
+
+        .booking-section input {
+            width: 100%;
+            height: 50px;
+            align-items: center;
+            text-align: center;
+            font-size: larger;
+            color: rgb(148, 148, 148);
+
+        }
+
+        .booking-section a {
+            width: 100%;
+            height: 50px;
+            padding-top: 5px;
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section class="book-head">
+            <div class="container">
+                <a href="#" class="redirect-link"><i class="bi bi-chevron-left"></i> Modify your booking </a>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <div class="booking-section">
+                            <div class="contaier">
+                                <h1><i class="bi bi-check-circle"></i>Enter your detials , </h1>
+                                <p>We will use these deatils to booking information </p>
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <label for="">Full Name</label><br>
+                                            <input type="text" class="mt-2" placeholder="Enter first and last name">
+                                        </div>
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-5">
+                                            <label for="">Email</label><br>
+                                            <input type="email" class="mt-2" placeholder="name@abc.com">
+                                        </div>
+                                        <div class="col-md-5">
+                                            <label for="" class="mt-2">Enter Your phone number</label><br>
+                                            <input type="number" class="mt-2" placeholder="+4332343432">
+                                        </div>
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-5">
+                                            <a href="" class="mt-5 btn btn-primary ">Send Information</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-1"></div> -->
+                    <div class="col-md-5 ">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{BookingDet.user}}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Location </h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    {{BookingDet.check_in_date}}
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
